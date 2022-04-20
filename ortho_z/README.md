@@ -22,7 +22,7 @@ Les valeur RVB sont à l'origine des entiers et celles altimétriques, des flott
 Le produit fini est un GTiff car l'étendue des productions ne nécessite pas la production de COG. La chaine reste adaptable pour la production de GTiff avec le profil COG.
 
 #### Chaine opératoire
-La chaine se décompose en trois grandes phases :
+La chaine se décompose en trois phases :
 -	l'enregistrement de chaque bande de l'orthophotograhie dans un raster propre,
 -	l'assemblage des bandes de l'orthophotograhie et du modèle numérique dans un vrt, puis,
 -	la production du résultat découpé selon une emprise voulue.

@@ -16,7 +16,9 @@ Le produit final attendu comportera 5 bandes :
 -	Bande 3, bleu,
 -	Bande 4, altimétrie et,
 -	Bande 5, masque
+
 Les valeur RVB sont à l'origine des entiers et celles altimétriques, des flottantes. Pour conserver un niveau de précision suffisant sur les valeurs altimétriques, toutes les valeurs du produit final doivent être converties en flottantes. Cela implique un rendu légèrement différent sur les bandes RVB.
+
 Le produit fini est un GTiff car l'étendue des productions ne nécessite pas la production de COG. La chaine reste adaptable pour la production de GTiff avec le profil COG.
 
 #### Chaine opératoire

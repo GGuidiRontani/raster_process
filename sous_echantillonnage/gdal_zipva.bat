@@ -11,7 +11,7 @@ gdalbuildvrt -input_file_list "path\prod\listes\tiles_list.txt" -addalpha -a_srs
 REM ----------STAGE 3 : PROD ZIPVA----------
 REM decoupe et sous-echantillonnage du vrt selon les emprises zipva
 REM la compression deflate permet de na pas avoir les artefacts crees avec une compression jpeg
-gdalwarp -cutline "\\batzella.lmcu.fr\vuesaeriennes\orthos\documentation\soustraction_zipva\zipva_multi_millesimes.gpkg" -csql "SELECT * FROM emprises_mel" -crop_to_cutline -of GTiff -co COMPRESS=DEFLATE -dstalpha -co BIGTIFF=IF_SAFER -co NUM_THREADS=ALL_CPUS -tr 5 5 -overwrite "path\prod\base.vrt"  "path\prod\zipva.tif"
+gdalwarp -cutline "path\zipva_multi_millesimes.gpkg" -csql "SELECT * FROM emprises_mel" -crop_to_cutline -of GTiff -co COMPRESS=DEFLATE -dstalpha -co BIGTIFF=IF_SAFER -co NUM_THREADS=ALL_CPUS -tr 5 5 -overwrite "path\prod\base.vrt"  "path\prod\zipva.tif"
 
 REM ----------STAGE 4 : PROD VRT SOUS-PRODUITS----------
 REM assemblage du vrt des tuiles et du tif sous-echantillonne
